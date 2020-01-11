@@ -12,6 +12,15 @@
 	    .sidenav-fixed{
 	    	margin-top: 65px;
 	    }
+		main, footer {
+			padding-left: 300px;
+		}
+
+		@media only screen and (max-width : 992px) {
+			header, main, footer {
+				padding-left: 0;
+			}
+		}
     </style>
 	@yield('css')
 </head>
@@ -34,15 +43,17 @@
 	  	</ul>
 		<div class="container">
 			<ul class="sidenav sidenav-fixed">
-				<li><a href="#!">Inicio</a></li>
-				<li><a href="#!">Ingresos</a></li>
-				<li><a href="#!">Egresos</a></li>
-				<li><a href="#!">Propietarios</a></li>
-				<li><a href="#!">Generar balance</a></li>
+				<li><a href="#!" class="waves-effect">Inicio</a></li>
+				<li><a href="#!" class="waves-effect">Ingresos</a></li>
+				<li><a href="#!" class="waves-effect">Egresos</a></li>
+				<li><a href="#!" class="waves-effect">Propietarios</a></li>
+				<li><a href="#!" class="waves-effect">Generar balance</a></li>
 			</ul>
 		</div>
 	</header>
-	@yield('body')
+	<main>
+		@yield('body')
+	</main>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
